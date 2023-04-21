@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, 
+html {
+    font-family: 'Hind', sans-serif ;
+}
+
+
+.heading{
+    width: 750px;
+}
+
+/* HEADER */
+/* trước hover */
+header{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 100;
+    transform: translateX(-50%);
+}
+
+header .navbar-toggler {
+    background-color: #35a22c;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: all .2s;
+}
+
+header .navbar-toggler:hover{
+    background-color: #0ea8cf ;
+}
+
+/* NAV */
+.navbar-brand span{
+    color: white;
+}
+
+#portNavbar .nav-link{
+    color: white;
+    transition: all .5s;
+}
+
+#portNavbar .nav-link:hover{
+    color: #35a22c ;
+}
+#portNavbar .nav-link::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #35a22c ;
+    display: block; 
+    transition: all .5s;
+}
+/* sau hover */
+#portNavbar .nav-link:hover::after{
+    width: 100%;
+}
+
+#portNavbar .active .nav-link::after{
+    width: 100%;
+}
+
+#portNavbar .active .nav-link{
+    color: #35a22c;
+}
+
+.navbar-brand i{
+    color: #35a22c;
+    font-size: 45px;
+}
+
+.navbar-brand span{
+    font-size: 36px;
+}
+
+#portNavbar .nav-item{
+ padding-right: 20px;
+}
+
+/* CAROUSEL */
+/* B1: chỉnh kích thước ảnh avatar
+B2: chỉnh kích thước hình nền 
+B3: chỉnh nội dung vào giữa
+B4: chỉnh hình dạng indicators */
+
+/* B1: chỉnh kích thước ảnh avatar */
+
+.portAvatar{
+    width: 140px;
+    border-radius: 50%;
+}
+
+
+/* vw: view with: bằng kích thước trình duyệt với kích thước màn hình hiện tại 
+thường dùng cho font size, vùng chữ nội dung chữ quan trọng mà khách 
+hàng không muốn thay đổi nội dung ví dụ như slogan, banner, carousel*/
+/* vh: view height: chỉnh kích thước chiều cao bằng màn hình */
+
+/* %: lấy kích thước thẻ cha gần nhất
+vw: lấy kích thước trình duyệt màn hình hiện tại
+vh:  */
+
+/* B2: chỉnh kích thước hình nền  */
+
+#portCarouselID .carousel-item{
+   height: 100vh;
+   /* 100vh: luôn có % bằng với khung trình duyệt không quan tâm cha con */
+}
+
+#portCarouselID .carousel-item>img{
+    height: 100%;
+    filter: brightness(50%);
+    object-fit: cover;
+}
+/* B3: chỉnh nội dung vào giữa, căn giữa với thẻ có position:absolute */
+#portCarouselID .carousel-caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* B4: chỉnh hình dạng indicators */
+
+#portCarouselID .carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+#portCarouselID .carousel-indicators li.active{
+    background-color: #35a22c   ;
+}
+
+#portCarouselID .carousel-caption h5{
+    font-size: 56px;
+    line-height: 65px;
+}
+
+#portCarouselID .carousel-caption p {
+    font-size: 24px;
+}
+
+/* PROJECTS */
+
+.projects__item{
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-top: 30px;
+    box-shadow: 0 0 0.4rem rgba(0,0,0,.13);
+    border: none;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.projects__item .card-body{
+border: 1px solid transparent;
+border-radius: 0 0 1rem 1rem;
+transition: all .5s;
+}
+
+.projects__item:hover .card-body{
+    border-color: #35a22c;
+} 
+
+.projects__item:hover h5{
+    color: #35a22c;
+}
+
+
+/* SERVICES */
+
+.services{
+    background-image: url(../image/3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0 120px ;
+    background-attachment: fixed;
+    position: relative;
+    background-position: center;
+}
+
+.services__text{
+    position: relative;
+    width: 750px;
+}
+
+.services__text h2{
+    font-weight: 600;
+}
+
+.services__overlay{
+    background: rgba(7,10,12,.72);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+     
+.services__item{
+    padding: 40px 40px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.1);
+    backdrop-filter: blur(3px);
+    transition: all .5s;
+}
+
+.services__item:hover{
+    background-color: black;
+    border-color: white;
+}
+
+
+.services__item i{
+    font-size: 48px;
+    color: #35a22c;
+}
+
+.services__item h4{
+    font-size: 20px;
+    color: #fff;
+    line-height: 30px;
+    padding-top: 25px;
+    font-weight: 800;
+}
+
+
+/* AWARD */
+.award{
+    position: relative;
+    padding: 100px 0;
+}
+
+
+.award__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/memphis_3.png);
+    background-size: 50% auto;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    opacity: .5;
+}
+
+
+.award__left{
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.3);
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid  rgba(255, 255, 255, 0.18) ;
+    padding: 45px;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+}
+
+.award__left h2{
+    font-weight: 700;
+}
+
+.award__left p{
+    color: #585858;
+    line-height: 24px;
+    
+}
+
+/* FOOTER */
+
+footer{
+    background: #222;
+}
+
+.footer__main a{
+    text-decoration: none;
+    color: #aaa;;
+    margin-right: 10px;
+}
+
+
+.footer__main i {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 50%;
+    border: 1px solid #454545;
+    transition: all .5s;
+}
+
+.footer__main i:hover{
+    color: #35a22c;
+    border-color: #35a22c;
+}
+
+
+.footer__copies{
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid #454545;
+    color: #aaa;
+}
+
+.footer__copies a{
+    color: #aaa;
+    transition: all .5s;
+    text-decoration: none;
+}
+
+.footer__copies a:hover{
+    color: #35a22c;
+}
+
